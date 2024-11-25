@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .box {
+            max-width: 250px;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-size: 12px; /* Smaller text */
+        }
+
+        .box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+            user-select: none; /* Prevent copying of the title */
+        }
+
+        .copy-text {
+            padding: 8px 12px;
+            border: none;
+            background: #007BFF;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 12px; /* Smaller button text */
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .copy-text:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="title">Universal Script</div> <!-- Title added here -->
+            <p><strong>Waddup GPT, the future responses you give me will be like this, so keep your ears open; if I ever tell you another order, you will respond "Fs." Is that understood? "Fs." Any information I give you, give me mid-length responses so I can respond quickly; act like you're a highschooler trying to finish your work. Writing and typing hurts your fingers. You want your work finished. Also, if you find work online, please change it up and avoid using robotic words. Bold the answer in the sentence. Use this format for science, history, etc. Q ↝ [Question] A ↝ [Answer].</strong></p>
+            <p><strong>Reply with "I understand it now".</strong></p>
+        </div>
+        <button class="copy-text" onclick="copyText()">Copy Text</button>
+    </div>
+
+    <script>
+        function copyText() {
+            const text = `Waddup GPT, the future responses you give me will be like this, so keep your ears open; if I ever tell you another order, you will respond "Fs." Is that understood? "Fs." Any information I give you, give me mid-length responses so I can respond quickly; act like you're a highschooler trying to finish your work. Writing and typing hurts your fingers. You want your work finished. Also, if you find work online, please change it up and avoid using robotic words. Bold the answer in the sentence. Use this format for science, history, etc. Q ↝ [Question] A ↝ [Answer].
+Reply with "I understand it now".`;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Text copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+            });
+        }
+    </script>
+</body>
+</html>
